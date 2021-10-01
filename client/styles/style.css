@@ -1,0 +1,29 @@
+:root{
+    --lighter-color: #C6EBBE;
+    --light-color: #A9DBB8;
+    --main-color: #7CA5B8;
+    --dark-color: #38369A;
+    --darker-color: #020887;
+    --black-color: #001021;
+    --white-color: #FFFFF6;
+}
+
+body{
+    background-color: var(--white-color);
+    font-family: 'Noto Sans Display', sans-serif;
+}
+
+.coins-container{
+    align-items: center;
+    display: flex;
+}
+.title{
+    color: var(--dark-color);
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.title-container{
+    background-color: rgba(0,0,0,0.1);
+    border-radius: 1em;
+}

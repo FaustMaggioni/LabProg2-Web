@@ -5,29 +5,43 @@ import CoinGecko from 'coingecko-api';
 const app = express();
 const CoinGeckoClient = new CoinGecko();
 
-const func = async() => {
+const getCoinsData = async() => {
     let { data } = await CoinGeckoClient.coins.all();
     const min_data = data.slice(0,8);
-    const aux = min_data.map((coin) => (
+    const res = min_data.map((coin) => {
+      const price = coin.market_data.current_price.usd;
+      const percChange7d = coin.market_data.price_change_percentage_7d;
+      const priceLastWeek = getPriceLastWeek(price, percChange7d);
+      return(
       {
         id: coin.id, 
-        name: coin.id, 
+        name: coin.name, 
         symbol: coin.symbol, 
-        price: coin.market_data.current_price.usd, 
+        price, 
         image: coin.image.small,
-      }
-    ))
-    const res = {
-      data: aux,
-    }
+        price_last_week: priceLastWeek,
+      })
+    })
     return res;
   };
 
-app.get('/', async function(req, res) {
-    const coins = await func();
-    res.json(coins)
+const getPriceLastWeek = (current_price, perc) => {
+  return current_price - current_price * (perc * 0.01);
+}
+
+app.get('/coins', async (req, res) => {
+    const coins = await getCoinsData();
+    res.append('Access-Control-Allow-Origin', ['*']);
+    res.append('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+    res.append('Access-Control-Allow-Headers', 'Content-Type');
+    res.send(coins)
   });
+
+app.get('/aux', async (req, res) => {
+    let { data } = await CoinGeckoClient.coins.all();
+    res.send(data[0]);
+})
   
-  app.listen(3000, function() {
+  app.listen(5000, () => {
     console.log('Aplicación ejemplo, escuchando el puerto 3000!');
   });

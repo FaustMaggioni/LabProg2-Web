@@ -17,30 +17,38 @@ h1{
     margin: 0;
 }
 
-.card-outside{
-    background-color: #FFFFFF;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1200 800'%3E%3Cdefs%3E%3CradialGradient id='a' cx='0' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23d4eddb'/%3E%3Cstop offset='1' stop-color='%23d4eddb' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='b' cx='1200' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23a195cd'/%3E%3Cstop offset='1' stop-color='%23a195cd' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='c' cx='600' cy='0' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%230097be'/%3E%3Cstop offset='1' stop-color='%230097be' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='d' cx='600' cy='800' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23FFFFFF'/%3E%3Cstop offset='1' stop-color='%23FFFFFF' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='e' cx='0' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23A9DBB8'/%3E%3Cstop offset='1' stop-color='%23A9DBB8' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='f' cx='1200' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%2338369A'/%3E%3Cstop offset='1' stop-color='%2338369A' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='1200' height='800'/%3E%3Crect fill='url(%23b)' width='1200' height='800'/%3E%3Crect fill='url(%23c)' width='1200' height='800'/%3E%3Crect fill='url(%23d)' width='1200' height='800'/%3E%3Crect fill='url(%23e)' width='1200' height='800'/%3E%3Crect fill='url(%23f)' width='1200' height='800'/%3E%3C/svg%3E");
-    background-attachment: fixed;
-    background-size: cover;
-    border-radius: 0.5em;
+img{
+    display: block;
+    margin: auto;
+}
+
+p{
+    display: block;
+    margin: auto;
 }
 
 .card{
     background-color: var(--white-color);
-    border-radius: 1em;
+    border-radius: 0.5em;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+    display: block;
+    margin: auto;
+    height: 20vh;
+    width: 5em;
 }
 
 .coins-container{
     align-items: center;
     display: flex;
-    width: 100%;
     min-height: 100%;
+    width: 100%;
 }
 
 .title{
     color: var(--white-color);
     font-weight: 400;
     text-align: center;
+    margin: auto 0;
 }
 
 .header{
@@ -49,7 +57,7 @@ h1{
     background-attachment: fixed;
     background-size: cover;
     display: flex;
-    height: 3em;
+    height: 4em;
     justify-content: center;
     left: 0;
     margin: auto;
@@ -64,5 +72,5 @@ h1{
 }
 
 .content{
-    margin-top: 3em;
+    margin-top: 4em;
 }

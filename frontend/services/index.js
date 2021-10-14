@@ -1,17 +1,35 @@
-const API_KEY = 'b45eba2ab6460466b581af175207a0e64ee9cfa35781238cd60e74ba9f20984c';
-//const API_URL = `https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=USD,JPY,EUR&api_key=${API_KEY}`
 const API_URL = 'http://localhost:5000';
 
-async function prueba(){
+
+
+async function getCoinsInfo(){
     try {
-        const res = await fetch(`${API_URL}/coins`,{
-            'mode' : 'cors',
-        })
+        console.log(document)
+        const coins = document.querySelector('#container');
+        const res = await fetch(`${API_URL}/coins`,{'mode' : 'cors',});
         const data = await res.json();
-        console.log(data)
+        console.log(coins)
+        data.forEach((coin) => {
+            const card = document.createElement('div');
+            card.classList.add('card');
+            console.log(coin)
+            const name = coin.name;
+            const price = coin.price;
+            const image = coin.image;
+            const title = document.createElement('p');
+            title.textContent = name;
+            const visual_price = document.createElement('p');
+            visual_price.textContent = price;
+            const logo = document.createElement('img');
+            logo.src = image;
+            card.appendChild(title);
+            card.appendChild(visual_price);
+            card.appendChild(logo);
+            coins.appendChild(card);
+        })
     } catch (error) {
         
     } 
 };
 
-prueba();
+getCoinsInfo();

@@ -17,8 +17,10 @@
         <img class="icon" src="./assets/images/crypto.png" />
     </header>
     <div class="content">
-        <h2 class='content-title'> PRECIOS HOY </h2>
-        <a href="./precios7dias.html" class='content-title'> VER PRECIOS HACE 7 DIAS</a>
+        <h2 class='content-title'> PRECIOS HACE 7 DIAS </h2>
+        <div class="content-title">
+            <a href="./index.html"> VER PRECIOS HOY</a>
+        </div>
         <div id='container' class="coins-container">
 
         </div>
@@ -27,8 +29,9 @@
     <script src='./services/index.js'>
     </script>
     <script>
-        getCoinsInfo(true);
+        getCoinsInfo(false);
     </script>
+
 </body>
 
 </html>

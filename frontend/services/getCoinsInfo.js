@@ -2,11 +2,15 @@ const API_URL = 'http://localhost:5000';
 
 const coins = document.querySelector('#container');
 
-( async function getCoinsInfo(){
+const baseURL = 'http://127.0.0.1:5500/frontend/';
+const todayURL = `${baseURL}index.html`;
+
+(async function getCoinsInfo(){
     try {
         const res = await fetch(`${API_URL}/coins`,{'mode' : 'cors'});
         const data = await res.json();
-        console.log(data);
+        
+        const isActual = window.location.href === todayURL;
 
         data.forEach((coin) => {
             console.log('coin', coin)
@@ -14,7 +18,7 @@ const coins = document.querySelector('#container');
             card.classList.add('card');
             
             const name = coin.name;
-            const price = coin.price;
+            const price = (isActual ? coin.price : coin.price_last_week).toFixed(2);
             const image = coin.image;
 
             const title = document.createElement('p');
@@ -36,4 +40,4 @@ const coins = document.querySelector('#container');
     } catch (error) {
         console.log(error)
     } 
-} )()
+})()

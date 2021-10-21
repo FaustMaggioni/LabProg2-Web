@@ -8,21 +8,6 @@
     --white-color: #FFFFF6;
 }
 
-.precios {
-    position: relative;
-    align-items: right;
-}
-
-.centered {
-    color: #FFFFFF;
-    font-weight: 600;
-    font-size: 200%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
 body {
     background-color: var(--white-color);
     font-family: 'Noto Sans Display', sans-serif;

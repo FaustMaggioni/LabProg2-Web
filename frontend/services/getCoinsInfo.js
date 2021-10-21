@@ -5,7 +5,7 @@ const coins = document.querySelector('#container');
 const baseURL = 'http://127.0.0.1:5500/frontend/';
 const todayURL = `${baseURL}index.html`;
 
-(async function getCoinsInfo(){
+( async function getCoinsInfo(){
     try {
         const res = await fetch(API_URL,{ 'mode' : 'cors' });
         const data = await res.json();
@@ -33,20 +33,18 @@ const todayURL = `${baseURL}index.html`;
     } catch (error) {
         console.log(error)
     } 
-})()
+} )()
 
 function getCoinAttributes(coin){
     try {
         const isActual = window.location.href === todayURL;
-        const name = coin.name;
-        const price = (isActual ? coin.price : coin.price_last_week).toFixed(2);
-        const image = coin.image;
 
         return {
-            name,
-            price,
-            image
+            name: coin.name,
+            price: (isActual ? coin.price : coin.price_last_week).toFixed(2),
+            image: coin.image,
         }
+        
     } catch (error) {
         throw new Error(error)
     }

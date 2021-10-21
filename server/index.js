@@ -7,8 +7,7 @@ const CoinGeckoClient = new CoinGecko();
 
 const getCoinsData = async() => {
     let { data } = await CoinGeckoClient.coins.all();
-    const min_data = data.slice(0,8);
-    const res = min_data.map((coin) => {
+    const res = data.map((coin) => {
       const price = coin.market_data.current_price.usd;
       const percChange7d = coin.market_data.price_change_percentage_7d;
       const priceLastWeek = getPriceLastWeek(price, percChange7d);

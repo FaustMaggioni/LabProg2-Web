@@ -2,9 +2,9 @@ const API_URL = 'http://localhost:5000';
 
 const coins = document.querySelector('#container');
 
-async function getCoinsInfo(actual) {
+( async function getCoinsInfo(){
     try {
-        const res = await fetch(`${API_URL}/coins`, { 'mode': 'cors', });
+        const res = await fetch(`${API_URL}/coins`,{'mode' : 'cors'});
         const data = await res.json();
         console.log(data);
 
@@ -12,9 +12,9 @@ async function getCoinsInfo(actual) {
             console.log('coin', coin)
             const card = document.createElement('div');
             card.classList.add('card');
-
+            
             const name = coin.name;
-            const price = (actual ? coin.price : coin.price_last_week).toFixed(2);
+            const price = coin.price;
             const image = coin.image;
 
             const title = document.createElement('p');
@@ -34,6 +34,6 @@ async function getCoinsInfo(actual) {
             coins.appendChild(card);
         })
     } catch (error) {
-
-    }
-}
+        console.log(error)
+    } 
+} )()

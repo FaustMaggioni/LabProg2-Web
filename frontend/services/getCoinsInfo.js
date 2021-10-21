@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:5000';
+const API_URL = 'http://localhost:5000/coins';
 
 const coins = document.querySelector('#container');
 
@@ -7,19 +7,14 @@ const todayURL = `${baseURL}index.html`;
 
 (async function getCoinsInfo(){
     try {
-        const res = await fetch(`${API_URL}/coins`,{'mode' : 'cors'});
+        const res = await fetch(API_URL,{ 'mode' : 'cors' });
         const data = await res.json();
         
-        const isActual = window.location.href === todayURL;
-
         data.forEach((coin) => {
-            console.log('coin', coin)
             const card = document.createElement('div');
             card.classList.add('card');
             
-            const name = coin.name;
-            const price = (isActual ? coin.price : coin.price_last_week).toFixed(2);
-            const image = coin.image;
+            const { name, price, image } = getCoinAttributes(coin);
 
             const title = document.createElement('p');
             title.textContent = name;
@@ -31,13 +26,34 @@ const todayURL = `${baseURL}index.html`;
             const logo = document.createElement('img');
             logo.src = image;
 
-            card.appendChild(title);
-            card.appendChild(visual_price);
-            card.appendChild(logo);
-
+            appendToCard(card, title, visual_price, logo);
+            
             coins.appendChild(card);
         })
     } catch (error) {
         console.log(error)
     } 
 })()
+
+function getCoinAttributes(coin){
+    try {
+        const isActual = window.location.href === todayURL;
+        const name = coin.name;
+        const price = (isActual ? coin.price : coin.price_last_week).toFixed(2);
+        const image = coin.image;
+
+        return {
+            name,
+            price,
+            image
+        }
+    } catch (error) {
+        throw new Error(error)
+    }
+}
+
+function appendToCard(card, ...childrens){
+    childrens.forEach((item) => {
+        card.appendChild(item);
+    })
+}

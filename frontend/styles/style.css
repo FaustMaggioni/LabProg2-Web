@@ -38,11 +38,13 @@ img {
 }
 
 p {
+    text-align: center;
     display: block;
     margin: auto;
 }
 
 .card {
+    align-items: center;
     background-color: var(--white-color);
     border-color: var(--light-color);
     border-width: 2;
@@ -51,8 +53,8 @@ p {
     display: flex;
     flex-wrap: wrap;
     margin: 1em;
-    height: 20vh;
-    width: 100px;
+    height: 15vh;
+    min-width: 200px;
 }
 
 .content-title {

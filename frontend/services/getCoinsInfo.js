@@ -25,6 +25,7 @@ const todayURL = `${baseURL}index.html`;
 
             const logo = document.createElement('img');
             logo.src = image;
+            logo.classList.add('coin-info')
 
             appendToCard(card, title, visual_price, logo);
             
@@ -36,17 +37,12 @@ const todayURL = `${baseURL}index.html`;
 } )()
 
 function getCoinAttributes(coin){
-    try {
-        const isActual = window.location.href === todayURL;
+    const isActual = window.location.href === todayURL;
 
-        return {
-            name: coin.name,
-            price: (isActual ? coin.price : coin.price_last_week).toFixed(2),
-            image: coin.image,
-        }
-        
-    } catch (error) {
-        throw new Error(error)
+    return {
+        name: coin.name,
+        price: (isActual ? coin.price : coin.price_last_week).toFixed(2),
+        image: coin.image,
     }
 }
 

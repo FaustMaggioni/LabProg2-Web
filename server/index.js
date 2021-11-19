@@ -39,4 +39,3 @@ app.listen(5000, async () => {
 setInterval(async () => {
   coins = await getCoinsData();
 }, DIEZ_MINUTOS)
->>>>>>> 66fe9e82e40655996f1491eaef6d1c76ec771ccd

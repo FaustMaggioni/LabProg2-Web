@@ -42,5 +42,6 @@ app.get('/aux', async (req, res) => {
 })
   
   app.listen(5000, () => {
-    console.log('Aplicación ejemplo, escuchando el puerto 3000!');
+    console.log('Aplicación ejemplo, escuchando el puerto 5000!');
   });
+

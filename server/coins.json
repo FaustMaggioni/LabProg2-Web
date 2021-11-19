@@ -1,0 +1,402 @@
+[
+    {
+        "id": "bitcoin",
+        "name": "Bitcoin",
+        "symbol": "btc",
+        "price": 58165,
+        "image": "https://assets.coingecko.com/coins/images/1/small/bitcoin.png?1547033579",
+        "price_last_week": 64286.238068
+    },
+    {
+        "id": "ethereum",
+        "name": "Ethereum",
+        "symbol": "eth",
+        "price": 4302.02,
+        "image": "https://assets.coingecko.com/coins/images/279/small/ethereum.png?1595348880",
+        "price_last_week": 4693.69310888
+    },
+    {
+        "id": "binancecoin",
+        "name": "Binance Coin",
+        "symbol": "bnb",
+        "price": 584.98,
+        "image": "https://assets.coingecko.com/coins/images/825/small/binance-coin-logo.png?1547034615",
+        "price_last_week": 626.5315973840001
+    },
+    {
+        "id": "tether",
+        "name": "Tether",
+        "symbol": "usdt",
+        "price": 1,
+        "image": "https://assets.coingecko.com/coins/images/325/small/Tether-logo.png?1598003707",
+        "price_last_week": 1.0002612
+    },
+    {
+        "id": "solana",
+        "name": "Solana",
+        "symbol": "sol",
+        "price": 215.34,
+        "image": "https://assets.coingecko.com/coins/images/4128/small/Solana.jpg?1635329178",
+        "price_last_week": 233.24422896000002
+    },
+    {
+        "id": "cardano",
+        "name": "Cardano",
+        "symbol": "ada",
+        "price": 1.87,
+        "image": "https://assets.coingecko.com/coins/images/975/small/cardano.png?1547034860",
+        "price_last_week": 2.064467097
+    },
+    {
+        "id": "ripple",
+        "name": "XRP",
+        "symbol": "xrp",
+        "price": 1.08,
+        "image": "https://assets.coingecko.com/coins/images/44/small/xrp-symbol-white-128.png?1605778731",
+        "price_last_week": 1.1983473720000002
+    },
+    {
+        "id": "polkadot",
+        "name": "Polkadot",
+        "symbol": "dot",
+        "price": 41.42,
+        "image": "https://assets.coingecko.com/coins/images/12171/small/aJGBjJFU_400x400.jpg?1597804776",
+        "price_last_week": 46.973581174
+    },
+    {
+        "id": "usd-coin",
+        "name": "USD Coin",
+        "symbol": "usdc",
+        "price": 1,
+        "image": "https://assets.coingecko.com/coins/images/6319/small/USD_Coin_icon.png?1547042389",
+        "price_last_week": 0.9972703
+    },
+    {
+        "id": "dogecoin",
+        "name": "Dogecoin",
+        "symbol": "doge",
+        "price": 0.233454,
+        "image": "https://assets.coingecko.com/coins/images/5/small/dogecoin.png?1547792256",
+        "price_last_week": 0.2584124971038
+    },
+    {
+        "id": "shiba-inu",
+        "name": "Shiba Inu",
+        "symbol": "shib",
+        "price": 0.00004866,
+        "image": "https://assets.coingecko.com/coins/images/11939/small/shiba.png?1622619446",
+        "price_last_week": 0.000055319943354
+    },
+    {
+        "id": "avalanche-2",
+        "name": "Avalanche",
+        "symbol": "AVAX",
+        "price": 108.85,
+        "image": "https://assets.coingecko.com/coins/images/12559/small/coin-round-red.png?1604021818",
+        "price_last_week": 83.236495615
+    },
+    {
+        "id": "terra-luna",
+        "name": "Terra",
+        "symbol": "luna",
+        "price": 42.74,
+        "image": "https://assets.coingecko.com/coins/images/8284/small/luna1557227471663.png?1567147072",
+        "price_last_week": 49.418325878000005
+    },
+    {
+        "id": "litecoin",
+        "name": "Litecoin",
+        "symbol": "ltc",
+        "price": 217.27,
+        "image": "https://assets.coingecko.com/coins/images/2/small/litecoin.png?1547033580",
+        "price_last_week": 255.09099279900002
+    },
+    {
+        "id": "wrapped-bitcoin",
+        "name": "Wrapped Bitcoin",
+        "symbol": "wbtc",
+        "price": 58155,
+        "image": "https://assets.coingecko.com/coins/images/7598/small/wrapped_bitcoin_wbtc.png?1548822744",
+        "price_last_week": 64409.634220500004
+    },
+    {
+        "id": "crypto-com-chain",
+        "name": "Crypto.com Coin",
+        "symbol": "cro",
+        "price": 0.561049,
+        "image": "https://assets.coingecko.com/coins/images/7310/small/cypto.png?1547043960",
+        "price_last_week": 0.2178016904156
+    },
+    {
+        "id": "chainlink",
+        "name": "Chainlink",
+        "symbol": "link",
+        "price": 28.44,
+        "image": "https://assets.coingecko.com/coins/images/877/small/chainlink-new-logo.png?1547034700",
+        "price_last_week": 33.700868172
+    },
+    {
+        "id": "binance-usd",
+        "name": "Binance USD",
+        "symbol": "busd",
+        "price": 1,
+        "image": "https://assets.coingecko.com/coins/images/9576/small/BUSD.png?1568947766",
+        "price_last_week": 0.9963665
+    },
+    {
+        "id": "algorand",
+        "name": "Algorand",
+        "symbol": "algo",
+        "price": 1.9,
+        "image": "https://assets.coingecko.com/coins/images/4380/small/download.png?1547039725",
+        "price_last_week": 2.0346146199999997
+    },
+    {
+        "id": "matic-network",
+        "name": "Polygon",
+        "symbol": "matic",
+        "price": 1.61,
+        "image": "https://assets.coingecko.com/coins/images/4713/small/matic-token-icon.png?1624446912",
+        "price_last_week": 1.751111026
+    },
+    {
+        "id": "bitcoin-cash",
+        "name": "Bitcoin Cash",
+        "symbol": "bch",
+        "price": 574.62,
+        "image": "https://assets.coingecko.com/coins/images/780/small/bitcoin-cash-circle.png?1594689492",
+        "price_last_week": 661.443013368
+    },
+    {
+        "id": "uniswap",
+        "name": "Uniswap",
+        "symbol": "uni",
+        "price": 21.3,
+        "image": "https://assets.coingecko.com/coins/images/12504/small/uniswap-uni.png?1600306604",
+        "price_last_week": 24.809019510000002
+    },
+    {
+        "id": "vechain",
+        "name": "VeChain",
+        "symbol": "vet",
+        "price": 0.13937,
+        "image": "https://assets.coingecko.com/coins/images/1167/small/VeChain-Logo-768x725.png?1547035194",
+        "price_last_week": 0.161827510383
+    },
+    {
+        "id": "axie-infinity",
+        "name": "Axie Infinity",
+        "symbol": "axs",
+        "price": 131.84,
+        "image": "https://assets.coingecko.com/coins/images/13029/small/axie_infinity_logo.png?1604471082",
+        "price_last_week": 145.435551744
+    },
+    {
+        "id": "stellar",
+        "name": "Stellar",
+        "symbol": "xlm",
+        "price": 0.355127,
+        "image": "https://assets.coingecko.com/coins/images/100/small/Stellar_symbol_black_RGB.png?1552356157",
+        "price_last_week": 0.38894908240380005
+    },
+    {
+        "id": "dai",
+        "name": "Dai",
+        "symbol": "dai",
+        "price": 1,
+        "image": "https://assets.coingecko.com/coins/images/9956/small/4943.png?1636636734",
+        "price_last_week": 1.0007191
+    },
+    {
+        "id": "cosmos",
+        "name": "Cosmos",
+        "symbol": "atom",
+        "price": 28.36,
+        "image": "https://assets.coingecko.com/coins/images/1481/small/cosmos_hub.png?1555657960",
+        "price_last_week": 32.42676728
+    },
+    {
+        "id": "internet-computer",
+        "name": "Internet Computer",
+        "symbol": "icp",
+        "price": 42.11,
+        "image": "https://assets.coingecko.com/coins/images/14495/small/Internet_Computer_logo.png?1620703073",
+        "price_last_week": 47.401685774
+    },
+    {
+        "id": "tron",
+        "name": "TRON",
+        "symbol": "trx",
+        "price": 0.104679,
+        "image": "https://assets.coingecko.com/coins/images/1094/small/tron-logo.png?1547035066",
+        "price_last_week": 0.1091286007209
+    },
+    {
+        "id": "ftx-token",
+        "name": "FTX Token",
+        "symbol": "ftt",
+        "price": 52.63,
+        "image": "https://assets.coingecko.com/coins/images/9026/small/F.png?1609051564",
+        "price_last_week": 58.633856721
+    },
+    {
+        "id": "elrond-erd-2",
+        "name": "Elrond",
+        "symbol": "egld",
+        "price": 360.85,
+        "image": "https://assets.coingecko.com/coins/images/12335/small/elrond3_360.png?1626341589",
+        "price_last_week": 313.31209010500004
+    },
+    {
+        "id": "compound-ether",
+        "name": "cETH",
+        "symbol": "ceth",
+        "price": 86.33,
+        "image": "https://assets.coingecko.com/coins/images/10643/small/ceth2.JPG?1581389598",
+        "price_last_week": 94.400508252
+    },
+    {
+        "id": "terrausd",
+        "name": "TerraUSD",
+        "symbol": "ust",
+        "price": 1.01,
+        "image": "https://assets.coingecko.com/coins/images/12681/small/UST.png?1601612407",
+        "price_last_week": 1.008734975
+    },
+    {
+        "id": "filecoin",
+        "name": "Filecoin",
+        "symbol": "fil",
+        "price": 54.52,
+        "image": "https://assets.coingecko.com/coins/images/12817/small/filecoin.png?1602753933",
+        "price_last_week": 61.877653916
+    },
+    {
+        "id": "ethereum-classic",
+        "name": "Ethereum Classic",
+        "symbol": "etc",
+        "price": 50.74,
+        "image": "https://assets.coingecko.com/coins/images/453/small/ethereum-classic-logo.png?1547034169",
+        "price_last_week": 56.220975392
+    },
+    {
+        "id": "okb",
+        "name": "OKB",
+        "symbol": "okb",
+        "price": 24.77,
+        "image": "https://assets.coingecko.com/coins/images/4463/small/okb_token.png?1548386209",
+        "price_last_week": 28.097081629999998
+    },
+    {
+        "id": "staked-ether",
+        "name": "Lido Staked Ether",
+        "symbol": "steth",
+        "price": 4280.88,
+        "image": "https://assets.coingecko.com/coins/images/13442/small/steth_logo.png?1608607546",
+        "price_last_week": 4672.2127924080005
+    },
+    {
+        "id": "theta-token",
+        "name": "Theta Network",
+        "symbol": "theta",
+        "price": 6.35,
+        "image": "https://assets.coingecko.com/coins/images/2538/small/theta-token-logo.png?1548387191",
+        "price_last_week": 7.252342619999999
+    },
+    {
+        "id": "hedera-hashgraph",
+        "name": "Hedera",
+        "symbol": "hbar",
+        "price": 0.384211,
+        "image": "https://assets.coingecko.com/coins/images/3688/small/hbar.png?1637045634",
+        "price_last_week": 0.4274627080608
+    },
+    {
+        "id": "fantom",
+        "name": "Fantom",
+        "symbol": "ftm",
+        "price": 2.23,
+        "image": "https://assets.coingecko.com/coins/images/4001/small/Fantom.png?1558015016",
+        "price_last_week": 2.555858081
+    },
+    {
+        "id": "decentraland",
+        "name": "Decentraland",
+        "symbol": "mana",
+        "price": 4.16,
+        "image": "https://assets.coingecko.com/coins/images/878/small/decentraland-mana.png?1550108745",
+        "price_last_week": 1.8989260159999999
+    },
+    {
+        "id": "near",
+        "name": "Near",
+        "symbol": "near",
+        "price": 9.41,
+        "image": "https://assets.coingecko.com/coins/images/10365/small/near_icon.png?1601359077",
+        "price_last_week": 11.613640387
+    },
+    {
+        "id": "the-graph",
+        "name": "The Graph",
+        "symbol": "grt",
+        "price": 0.951808,
+        "image": "https://assets.coingecko.com/coins/images/13397/small/Graph_Token.png?1608145566",
+        "price_last_week": 1.0910996754944
+    },
+    {
+        "id": "helium",
+        "name": "Helium",
+        "symbol": "hnt",
+        "price": 45.9,
+        "image": "https://assets.coingecko.com/coins/images/4284/small/Helium_HNT.png?1612620071",
+        "price_last_week": 48.57864138
+    },
+    {
+        "id": "cdai",
+        "name": "cDAI",
+        "symbol": "cdai",
+        "price": 0.02180109,
+        "image": "https://assets.coingecko.com/coins/images/9281/small/cDAI.png?1576467585",
+        "price_last_week": 0.02175883948758
+    },
+    {
+        "id": "tezos",
+        "name": "Tezos",
+        "symbol": "xtz",
+        "price": 5.27,
+        "image": "https://assets.coingecko.com/coins/images/976/small/Tezos-logo.png?1547034862",
+        "price_last_week": 5.831417843
+    },
+    {
+        "id": "monero",
+        "name": "Monero",
+        "symbol": "xmr",
+        "price": 237.59,
+        "image": "https://assets.coingecko.com/coins/images/69/small/monero_logo.png?1547033729",
+        "price_last_week": 262.775324047
+    },
+    {
+        "id": "eos",
+        "name": "EOS",
+        "symbol": "eos",
+        "price": 4.28,
+        "image": "https://assets.coingecko.com/coins/images/738/small/eos-eos-logo.png?1547034481",
+        "price_last_week": 4.855746884
+    },
+    {
+        "id": "pancakeswap-token",
+        "name": "PancakeSwap",
+        "symbol": "cake",
+        "price": 16.11,
+        "image": "https://assets.coingecko.com/coins/images/12632/small/pancakeswap-cake-logo_%281%29.png?1629359065",
+        "price_last_week": 18.500396967
+    },
+    {
+        "id": "klay-token",
+        "name": "Klaytn",
+        "symbol": "klay",
+        "price": 1.53,
+        "image": "https://assets.coingecko.com/coins/images/9672/small/CjbT82vP_400x400.jpg?1570548320",
+        "price_last_week": 1.554260751
+    }
+]

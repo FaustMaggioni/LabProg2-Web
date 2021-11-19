@@ -1,40 +1,22 @@
-
 import express from 'express';
-import CoinGecko from 'coingecko-api';
+import { getCoinsData } from './services/getCoinsData.js';
 
 const app = express();
-const CoinGeckoClient = new CoinGecko();
+let coins;
+const DIEZ_MINUTOS = 1000 * 60 * 10;
 
-const getCoinsData = async() => {
-    let { data } = await CoinGeckoClient.coins.all();
-    const res = data.map((coin) => {
-      const price = coin.market_data.current_price.usd;
-      const percChange7d = coin.market_data.price_change_percentage_7d;
-      const priceLastWeek = getPriceLastWeek(price, percChange7d);
-      return(
-      {
-        id: coin.id, 
-        name: coin.name, 
-        symbol: coin.symbol, 
-        price, 
-        image: coin.image.small,
-        price_last_week: priceLastWeek,
-      })
-    })
-    return res;
-  };
+app.use(express.static("public"));
+app.use("/static", express.static("public"));
 
-const getPriceLastWeek = (current_price, perc) => {
-  return current_price - current_price * (perc * 0.01);
-}
+app.get('/api/coins/:from?/:to?', async (req, res) => {
+    const from = req.params.from || 0;
+    const to = req.params.to || 10;
 
-app.get('/coins', async (req, res) => {
-    const coins = await getCoinsData();
+    const resCoins = coins.slice(from,to);
+
     res.append('Access-Control-Allow-Origin', ['*']);
     res.append('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
     res.append('Access-Control-Allow-Headers', 'Content-Type');
-    res.send(coins)
-  });
 
 app.get('/aux', async (req, res) => {
     let { data } = await CoinGeckoClient.coins.all();
@@ -45,3 +27,16 @@ app.get('/aux', async (req, res) => {
     console.log('Aplicación ejemplo, escuchando el puerto 5000!');
   });
 
+
+    res.send(resCoins);
+  });
+
+app.listen(5000, async () => {
+  coins = await getCoinsData();
+  console.log('Aplicación ejemplo, escuchando el puerto 5000!');
+});
+
+setInterval(async () => {
+  coins = await getCoinsData();
+}, DIEZ_MINUTOS)
+>>>>>>> 66fe9e82e40655996f1491eaef6d1c76ec771ccd

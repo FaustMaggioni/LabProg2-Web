@@ -1,10 +1,8 @@
-[
-    {
-        "id": "bitcoin",
-        "name": "Bitcoin",
-        "symbol": "btc",
-        "price": 58165,
-        "image": "https://assets.coingecko.com/coins/images/1/small/bitcoin.png?1547033579",
-        "price_last_week": 64286.238068
-    }
-]
+{
+  "id": "bitcoin2",
+  "name": "Bitcoin2",
+  "symbol": "btc2",
+  "price": 99999,
+  "image": "https://assets.coingecko.com/coins/images/1/small/bitcoin.png?1547033579",
+  "price_last_week": 99286.238068
+}

@@ -3,7 +3,7 @@ const todayURL = `http://localhost:5000/index.html`;
 
 const coins = document.querySelector('#container');
 
-const STEP = 10;
+const STEP = 5;
 let from = 0;
 let to = from + STEP;
 

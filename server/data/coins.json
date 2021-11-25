@@ -14,5 +14,37 @@
     "price": 99999,
     "image": "https://assets.coingecko.com/coins/images/1/small/bitcoin.png?1547033579",
     "price_last_week": 99286.238068
+  },
+  {
+    "id": "mi moneda",
+    "name": "alta coin",
+    "symbol": "btc2",
+    "price": 99999,
+    "image": "https://assets.coingecko.com/coins/images/1/small/bitcoin.png?1547033579",
+    "price_last_week": 99286.238068
+  },
+  {
+    "id": "mi moneda",
+    "name": "alta coin",
+    "symbol": "btc2",
+    "price": 99999,
+    "image": "https://assets.coingecko.com/coins/images/1/small/bitcoin.png?1547033579",
+    "price_last_week": 99286.238068
+  },
+  {
+    "id": "mi moneda",
+    "name": "alta coin",
+    "symbol": "btc2",
+    "price": 99999,
+    "image": "https://assets.coingecko.com/coins/images/1/small/bitcoin.png?1547033579",
+    "price_last_week": 99286.238068
+  },
+  {
+    "id": "otra moneda",
+    "name": "otra coin",
+    "symbol": "btc2",
+    "price": 99999,
+    "image": "https://assets.coingecko.com/coins/images/1/small/bitcoin.png?1547033579",
+    "price_last_week": 99286.238068
   }
 ]

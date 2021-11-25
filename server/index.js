@@ -43,17 +43,17 @@ function functhen() {
   console.log("eeeso tilin");
 }
 app.post("/api/mycoins/", async (req, res) => {
-  let listaCoins = req.body;
+  let newCoin = req.body;
+  console.log(newCoin);
   fs.readFile("../server/data/coins.json", (err, data) => {
     if (err) {
       res.send("error");
     } else {
-      let postedCoin = JSON.parse(data);
-      listaCoins.push(postedCoin);
-      console.log(listaCoins);
+      let postedCoins = JSON.parse(data).coins;
+      postedCoins.push(newCoin);
       fs.writeFile(
         "../server/data/coins.json",
-        JSON.stringify(listaCoins, null, 2),
+        JSON.stringify(postedCoins, null, 2),
         (err) => {
           if (err) throw err;
           console.log("Data written to file");

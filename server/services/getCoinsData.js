@@ -9,7 +9,7 @@ const getPriceLastWeek = (current_price, perc) => {
 export const getCoinsData = async () => {
   let { data } = await CoinGeckoClient.coins.all();
   const res = data.map((coin) => {
-    const price = coin.market_data.current_price.usd;
+    const price = coin.market_data.current_price.usd.toFixed(2);
     const percChange7d = coin.market_data.price_change_percentage_7d;
     const priceLastWeek = getPriceLastWeek(price, percChange7d);
     

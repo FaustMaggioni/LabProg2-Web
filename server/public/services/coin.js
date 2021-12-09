@@ -7,7 +7,7 @@ function getPageId() {
 
 async function getSingleCoinData() {
     const id = getPageId();
-    const res = await fetch(`api/coin/${id}`,{ 
+    const res = await fetch(`api/coins/${id}`,{ 
         'method' : 'GET',
         'mode' : 'cors',
     });

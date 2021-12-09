@@ -8,7 +8,7 @@ let to = from + STEP;
 
 async function getCoinsInfo(fromParam,toParam){
     try {
-        const res = await fetch(`api/coins/${fromParam}/${toParam}`,{ 
+        const res = await fetch(`api/coins/?from=${from}&to=${to}`,{ 
             'method' : 'GET',
             'mode' : 'cors',
         });
@@ -55,7 +55,7 @@ function getCoinAttributes(coin){
 
     return {
         name: coin.name,
-        price: (isActual ? coin.price : coin.price_last_week).toFixed(2),
+        price: isActual ? coin.price : coin.price_last_week,
         image: coin.image,
         id: coin.id,
     }

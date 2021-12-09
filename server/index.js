@@ -26,7 +26,7 @@ app.get("/api/coins/:from?/:to?", async (req, res) => {
   res.append("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE");
   res.append("Access-Control-Allow-Headers", "Content-Type");
 
-  res.send(resCoins);
+  res.status(200).send(resCoins);
 });
 
 app.listen(5000, async () => {
@@ -38,9 +38,9 @@ app.get("/api/coin/:id", async (req, res) => {
   try {
     const id = req.params.id;
     const coin = await getSingleCoinData(id);
-    res.send(coin);
+    res.status(200).send(coin);
   } catch (error) {
-    
+    res.status(500).send("error interno del servidor");
   }
 })
 
@@ -81,7 +81,7 @@ app.post("/api/mycoins/", async (req, res) => {
 app.get("/api/mycoins", async (req, res) => {
   fs.readFile("../server/data/coins.json", (err, data) => {
     if (err) {
-      res.satuts(500).send("error interno del servidor");
+      res.status(500).send("error interno del servidor");
     } else {
       let coins = JSON.parse(data);
       console.log(coins);

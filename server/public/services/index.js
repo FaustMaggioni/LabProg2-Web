@@ -1,15 +1,14 @@
-const API_URL = '/api/coins';
 const todayURL = `http://localhost:5000/index.html`;
 
 const coins = document.querySelector('#container');
 
-const STEP = 5;
+const STEP = 10;
 let from = 0;
 let to = from + STEP;
 
 async function getCoinsInfo(fromParam,toParam){
     try {
-        const res = await fetch(`${API_URL}/${fromParam}/${toParam}`,{ 
+        const res = await fetch(`api/coins/${fromParam}/${toParam}`,{ 
             'method' : 'GET',
             'mode' : 'cors',
         });
@@ -23,8 +22,8 @@ async function getCoinsInfo(fromParam,toParam){
             const card = document.createElement('div');
             card.classList.add('card');
             
-            const { name, price, image } = getCoinAttributes(coin);
-
+            const { name, price, image, id } = getCoinAttributes(coin);
+            card.id = id;
             const title = document.createElement('p');
             title.textContent = name;
 
@@ -37,7 +36,8 @@ async function getCoinsInfo(fromParam,toParam){
             logo.classList.add('coin-info')
 
             appendToCard(card, title, visual_price, logo);
-            
+            setCardListener(card);
+
             coins.appendChild(card);
         })
     } catch (error) {
@@ -57,11 +57,19 @@ function getCoinAttributes(coin){
         name: coin.name,
         price: (isActual ? coin.price : coin.price_last_week).toFixed(2),
         image: coin.image,
+        id: coin.id,
     }
 }
 
 function appendToCard(card, ...childrens){
     childrens.forEach((item) => {
         card.appendChild(item);
+    })
+}
+
+function setCardListener(card) {
+    card.addEventListener("click", () => {
+        sessionStorage.setItem("id", card.id);
+        window.location.href = `/coin.html`;
     })
 }

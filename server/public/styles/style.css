@@ -104,8 +104,11 @@ p {
 }
 
 .content {
+    margin-left: 2rem;
+    margin-right: 2rem;
     margin-top: 4em;
     min-height: 100vh;
+    text-align: left;
     padding: 0.5%;
 }
 
@@ -152,4 +155,10 @@ footer{
     box-shadow: 1px 1px 4px 2px var(--dark-color);;
     color: var(--black-color);
     font-weight: 600;
+}
+
+#bigicon{
+    display: block;
+    margin: auto;
+    padding: 1rem;
 }

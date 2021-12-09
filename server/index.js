@@ -1,16 +1,21 @@
 import { RSA_NO_PADDING } from "constants";
 import express from "express";
-import { getCoinsData } from "./services/getCoinsData.js";
+import { getCoinsData, getSingleCoinData } from "./services/getCoinsData.js";
 import fs from "fs";
 
 const app = express();
 let coins;
 const DIEZ_MINUTOS = 1000 * 60 * 10;
 
+setInterval(async () => {
+  coins = await getCoinsData();
+}, DIEZ_MINUTOS);
+
 app.use(express.static("public"));
 app.use("/static", express.static("public"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
 app.get("/api/coins/:from?/:to?", async (req, res) => {
   const from = req.params.from || 0;
   const to = req.params.to || 10;
@@ -21,11 +26,6 @@ app.get("/api/coins/:from?/:to?", async (req, res) => {
   res.append("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE");
   res.append("Access-Control-Allow-Headers", "Content-Type");
 
-  app.get("/aux", async (req, res) => {
-    let { data } = await CoinGeckoClient.coins.all();
-    res.send(data[0]);
-  });
-
   res.send(resCoins);
 });
 
@@ -34,9 +34,15 @@ app.listen(5000, async () => {
   console.log("servidor COINS, escuchando el puerto 5000!");
 });
 
-setInterval(async () => {
-  coins = await getCoinsData();
-}, DIEZ_MINUTOS);
+app.get("/api/coin/:id", async (req, res) => {
+  try {
+    const id = req.params.id;
+    const coin = await getSingleCoinData(id);
+    res.send(coin);
+  } catch (error) {
+    
+  }
+})
 
 //api alternativa
 

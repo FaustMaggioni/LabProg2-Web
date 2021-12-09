@@ -1,50 +1,28 @@
-[
-  {
-    "id": "eth",
-    "name": "eth",
-    "symbol": "btc2",
-    "price": 99999,
-    "image": "https://assets.coingecko.com/coins/images/1/small/bitcoin.png?1547033579",
-    "price_last_week": 99286.238068
-  },
-  {
-    "id": "bitcoin3",
-    "name": "Bitcoin3",
-    "symbol": "btc2",
-    "price": 99999,
-    "image": "https://assets.coingecko.com/coins/images/1/small/bitcoin.png?1547033579",
-    "price_last_week": 99286.238068
-  },
-  {
-    "id": "mi moneda",
-    "name": "alta coin",
-    "symbol": "btc2",
-    "price": 99999,
-    "image": "https://assets.coingecko.com/coins/images/1/small/bitcoin.png?1547033579",
-    "price_last_week": 99286.238068
-  },
-  {
-    "id": "mi moneda",
-    "name": "alta coin",
-    "symbol": "btc2",
-    "price": 99999,
-    "image": "https://assets.coingecko.com/coins/images/1/small/bitcoin.png?1547033579",
-    "price_last_week": 99286.238068
-  },
-  {
-    "id": "mi moneda",
-    "name": "alta coin",
-    "symbol": "btc2",
-    "price": 99999,
-    "image": "https://assets.coingecko.com/coins/images/1/small/bitcoin.png?1547033579",
-    "price_last_week": 99286.238068
-  },
-  {
-    "id": "otra moneda",
-    "name": "otra coin",
-    "symbol": "btc2",
-    "price": 99999,
-    "image": "https://assets.coingecko.com/coins/images/1/small/bitcoin.png?1547033579",
-    "price_last_week": 99286.238068
-  }
-]
+{
+  "coins": [
+    {
+      "id": "otra coin",
+      "name": "otra coin",
+      "symbol": "btc2",
+      "price": 99999,
+      "image": "https://assets.coingecko.com/coins/images/1/small/bitcoin.png?1547033579",
+      "price_last_week": 99286.238068
+    },
+    {
+      "id": "alta coin",
+      "name": "alta coin",
+      "symbol": "btc2",
+      "price": 99999,
+      "image": "https://assets.coingecko.com/coins/images/1/small/bitcoin.png?1547033579",
+      "price_last_week": 99286.238068
+    },
+    {
+      "id": "una moneda",
+      "name": "UM",
+      "symbol": "btc2",
+      "price": 99999,
+      "image": "https://assets.coingecko.com/coins/images/1/small/bitcoin.png?1547033579",
+      "price_last_week": 99286.238068
+    }
+  ]
+}

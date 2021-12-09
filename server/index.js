@@ -31,7 +31,7 @@ app.get("/api/coins/:from?/:to?", async (req, res) => {
 
 app.listen(5000, async () => {
   coins = await getCoinsData();
-  console.log("Aplicación ejemplo, escuchando el puerto 5000!");
+  console.log("servidor COINS, escuchando el puerto 5000!");
 });
 
 setInterval(async () => {
@@ -39,27 +39,35 @@ setInterval(async () => {
 }, DIEZ_MINUTOS);
 
 //api alternativa
-function functhen() {
-  console.log("eeeso tilin");
-}
+
 app.post("/api/mycoins/", async (req, res) => {
-  let newCoin = req.body;
+  const newCoin = req.body;
   fs.readFile("../server/data/coins.json", (err, coinsJSON) => {
     if (err) {
-      res.send("error");
+      res.status(500).send("error interno del servidor");
     } else {
-      let coinsList = JSON.parse(coinsJSON);
-      console.log(coinsList);
-      coinsList.push(newCoin);
-      fs.writeFile(
-        "../server/data/coins.json",
-        JSON.stringify(coinsList, null, 2),
-        (err) => {
-          if (err) throw err;
-          console.log("Data written to file");
+      const coinsList = JSON.parse(coinsJSON);
+      const coinYaExisteEnLaLista = coinsList.coins.find((e) => {
+        return e.id === req.body.id;
+      });
+      if (coinYaExisteEnLaLista)
+        coinsList.coins = coinsList.coins.filter((e) => {
+          return e.id !== req.body.id;
+        });
+      coinsList.coins.push(newCoin);
+      const coinsListAsString = JSON.stringify(coinsList, null, 2);
+      fs.writeFile("../server/data/coins.json", coinsListAsString, (err) => {
+        if (err) {
+          res.status(500).send("error interno del servidor");
+        } else {
+          if (coinYaExisteEnLaLista) {
+            console.log(`se actualizo ${req.body.id} de la lista`);
+          } else {
+            console.log(`se agrego ${req.body.id} a la lista`);
+          }
+          res.status(200).send(req.body);
         }
-      );
-      res.send(req.body);
+      });
     }
   });
 });
@@ -67,11 +75,11 @@ app.post("/api/mycoins/", async (req, res) => {
 app.get("/api/mycoins", async (req, res) => {
   fs.readFile("../server/data/coins.json", (err, data) => {
     if (err) {
-      res.send("error");
+      res.satuts(500).send("error interno del servidor");
     } else {
       let coins = JSON.parse(data);
       console.log(coins);
-      res.send(coins);
+      res.status(200).send(coins);
     }
   });
 });

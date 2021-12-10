@@ -28,6 +28,13 @@ export const getCoinsData = async () => {
 
 export const getSingleCoinData = async (id) => {
   let { data } = await CoinGeckoClient.coins.fetch(id);
+  if (data.error) {
+    if (data.error === 'Could not find coin with the given id'){
+      throw {...data, code: 404}
+    }
+    throw data;
+  }
+  
   const price = data.market_data.current_price.usd.toFixed(2);
   console.log(price)
   const percChange7d = data.market_data.price_change_percentage_7d;
@@ -42,6 +49,5 @@ export const getSingleCoinData = async (id) => {
     price,
     priceLastWeek,
   }
-  console.log(res);
   return res;
 }

@@ -59,7 +59,7 @@ p {
     align-items: flex-start;
     display: flex;
     flex-wrap: wrap;
-    justify-content: left;
+    justify-content: center;
     min-height: 100%;
     width: 100%;
 }

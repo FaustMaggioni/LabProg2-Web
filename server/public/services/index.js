@@ -13,6 +13,8 @@ async function getCoinsInfo(fromParam, toParam) {
       mode: "cors",
     });
 
+    console.log(res);
+
     from = from + STEP;
     to = from + STEP;
 

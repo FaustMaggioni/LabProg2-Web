@@ -1,7 +1,6 @@
 import express from "express";
 import dotenv from "dotenv";
-import { router as coinsRouter } from './routes/coins.js';
-
+import { router as coinsRouter } from "./routes/coins.js";
 dotenv.config();
 
 const app = express();
@@ -11,7 +10,6 @@ app.use(express.static("public"));
 app.use("/static", express.static("public"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
 app.use("/api/coins", coinsRouter);
 
 app.listen(PORT, async () => {

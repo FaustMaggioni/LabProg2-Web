@@ -1,4 +1,4 @@
-const todayURL = `https://lab-prog2-web.vercel.app/:5000/index.html`;
+const todayURL = `https://lab-prog2-web.vercel.app/`;
 
 const coins = document.querySelector("#container");
 
@@ -8,7 +8,7 @@ let to = from + STEP;
 
 async function getCoinsInfo(fromParam, toParam) {
   try {
-    const res = await fetch(`api/coins/?from=${from}&to=${to}`, {
+    const res = await fetch(`api/coins/?from=${fromParam}&to=${toParam}`, {
       method: "GET",
       mode: "cors",
     });

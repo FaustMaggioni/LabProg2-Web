@@ -1,17 +1,30 @@
 import { v4 as makeId } from "uuid";
 import fs from "fs";
+import path from "path";
 
 export default function addNewCoin(req, res) {
   const coin = req.body;
-  console.log(req.body);
-  const { name, image, price } = coin;
 
-  if (!name || !price) {
+  if (coin.price) {
+    coin.price = Number(coin.price);
+  }
+
+  if (coin.price_last_week) {
+    coin.price_last_week = Number(coin.price_last_week);
+  }
+
+  const { name, image, price, price_last_week } = coin;
+
+  if (!name || !price || !price_last_week) {
     res.sendStatus(404).send("<h1> Credenciales invalidas </h1>");
     return;
   }
 
-  fs.readFile("../../data/coins.json", (err, coinsJSON) => {
+  console.log(process.cwd());
+
+  const filename = process.cwd() + "/data/coins.json";
+
+  fs.readFile(filename, (err, coinsJSON) => {
     if (err) {
       console.log("1: ", err.message);
       res.status(500).send("error interno del servidor");
@@ -21,12 +34,12 @@ export default function addNewCoin(req, res) {
       coinsList.coins.push(newCoin);
       const coinsListAsString = JSON.stringify(coinsList, null, 2);
 
-      fs.writeFile("server/data/coins.json", coinsListAsString, (err) => {
+      fs.writeFile(filename, coinsListAsString, (err) => {
         if (err) {
           console.log("2: ", err.message);
           res.status(500).send("error interno del servidor");
         } else {
-          console.log(`se agrego ${req.body.id} a la lista`);
+          console.log(`se agrego ${newCoin.id} a la lista`);
           res.status(200).send(req.body);
         }
       });

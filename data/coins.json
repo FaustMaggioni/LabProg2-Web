@@ -61,6 +61,12 @@
       "price": 1000,
       "price_last_week": 3322,
       "id": "37a6b5b2-8e22-47a8-897b-ea03c1b32a29"
+    },
+    {
+      "name": "fauscoin",
+      "price": 1000,
+      "price_last_week": 3322,
+      "id": "f6ea5e2e-b624-4a68-ab40-a1c7371e172b"
     }
   ]
 }

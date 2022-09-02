@@ -23,50 +23,6 @@
       "price": 99999,
       "image": "https://assets.coingecko.com/coins/images/1/small/bitcoin.png?1547033579",
       "price_last_week": 99286.238068
-    },
-    {
-      "name": "fauscoin",
-      "price": "1000",
-      "id": "c24036fa-8735-42ea-8c5a-0f2f3b093241"
-    },
-    {
-      "name": "fauscoin",
-      "price": "1000",
-      "id": "870cda5d-73ad-4c71-a0e6-fc8ab8c718b5"
-    },
-    {
-      "name": "fauscoin",
-      "price": "1000",
-      "id": "4ba348d3-eb79-4c6f-a3d2-4a2c7800b894"
-    },
-    {
-      "name": "fauscoin",
-      "price": "1000",
-      "id": "ace96380-8647-42b1-a0f8-070773944574"
-    },
-    {
-      "name": "fauscoin",
-      "price": "1000",
-      "price_last_week": 3322,
-      "id": "af79eb07-ce45-4656-9c9b-82322bc5af09"
-    },
-    {
-      "name": "fauscoin",
-      "price": 3322,
-      "price_last_week": 3322,
-      "id": "37f8ad4c-12f0-4052-9114-f3634314e061"
-    },
-    {
-      "name": "fauscoin",
-      "price": 1000,
-      "price_last_week": 3322,
-      "id": "37a6b5b2-8e22-47a8-897b-ea03c1b32a29"
-    },
-    {
-      "name": "fauscoin",
-      "price": 1000,
-      "price_last_week": 3322,
-      "id": "f6ea5e2e-b624-4a68-ab40-a1c7371e172b"
     }
   ]
 }

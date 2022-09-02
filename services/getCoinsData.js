@@ -1,4 +1,5 @@
 import CoinGecko from "coingecko-api";
+import fs from "fs";
 
 const CoinGeckoClient = new CoinGecko();
 
@@ -8,13 +9,11 @@ const getPriceLastWeek = (current_price, perc) => {
 
 export const getCoinsData = async () => {
   let { data } = await CoinGeckoClient.coins.all();
-  console.log(Object.keys(data[1]));
-  const res = data.map((coin, i) => {
+  let res = data.map((coin, i) => {
     const price = coin.market_data.current_price.usd.toFixed(2);
     const percChange7d = coin.market_data.price_change_percentage_7d;
     const priceLastWeek = getPriceLastWeek(price, percChange7d);
     const ranking = i;
-    console.log(ranking);
     return {
       id: coin.id,
       name: coin.name,
@@ -25,6 +24,13 @@ export const getCoinsData = async () => {
       ranking,
     };
   });
+
+  const filename = process.cwd() + "/data/coins.json";
+
+  const fileCoins = JSON.parse(fs.readFileSync(filename).toString()).coins;
+
+  res = res.concat(fileCoins);
+
   return res;
 };
 

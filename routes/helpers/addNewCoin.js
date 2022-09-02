@@ -1,6 +1,5 @@
 import { v4 as makeId } from "uuid";
 import fs from "fs";
-import path from "path";
 
 export default function addNewCoin(req, res) {
   const coin = req.body;
@@ -13,9 +12,9 @@ export default function addNewCoin(req, res) {
     coin.price_last_week = Number(coin.price_last_week);
   }
 
-  const { name, image, price, price_last_week } = coin;
+  const { name, symbol, price, price_last_week } = coin;
 
-  if (!name || !price || !price_last_week) {
+  if (!name || !price || !price_last_week || !symbol) {
     res.sendStatus(404).send("<h1> Credenciales invalidas </h1>");
     return;
   }
@@ -26,7 +25,6 @@ export default function addNewCoin(req, res) {
 
   fs.readFile(filename, (err, coinsJSON) => {
     if (err) {
-      console.log("1: ", err.message);
       res.status(500).send("error interno del servidor");
     } else {
       const coinsList = JSON.parse(coinsJSON);
@@ -36,7 +34,6 @@ export default function addNewCoin(req, res) {
 
       fs.writeFile(filename, coinsListAsString, (err) => {
         if (err) {
-          console.log("2: ", err.message);
           res.status(500).send("error interno del servidor");
         } else {
           console.log(`se agrego ${newCoin.id} a la lista`);

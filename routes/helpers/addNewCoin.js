@@ -28,7 +28,11 @@ export default function addNewCoin(req, res) {
       res.status(500).send("error interno del servidor");
     } else {
       const coinsList = JSON.parse(coinsJSON);
-      const newCoin = { ...coin, id: makeId() };
+      const newCoin = {
+        ...coin,
+        id: makeId(),
+        ranking: 50 + coinsList.coins.length,
+      };
       coinsList.coins.push(newCoin);
       const coinsListAsString = JSON.stringify(coinsList, null, 2);
 
